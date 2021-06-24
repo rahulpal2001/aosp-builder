@@ -1,0 +1,8 @@
+#!/bin/bash
+cd /tmp/rom
+
+# Normal build steps
+source build/envsetup.sh
+lunch dot_G-userdebug
+make sepolicy
+make init
