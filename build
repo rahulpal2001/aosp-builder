@@ -2,8 +2,8 @@
 cd /tmp/rom
 
 # Normal build steps
-. build/env*
-lunch spark_G-userdebug
+source build/envsetup.sh
+lunch lineage_G-userdebug
 make sepolicy
 make init
 make bootimage
