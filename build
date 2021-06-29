@@ -4,7 +4,7 @@ cd /tmp/rom
 # Normal build steps
 make clean && make clobber
 source build/envsetup.sh
-lunch lineage_G-userdebug
+lunch dot_G-userdebug
 make sepolicy
 make init
 make bootimage
