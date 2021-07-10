@@ -2,9 +2,13 @@
 cd /tmp/rom
 
 # Normal build steps
-make clean && make clobber
-source build/envsetup.sh
-lunch dot_G-userdebug
-make sepolicy
-make init
-make bootimage
+#make clean && make clobber
+#source build/envsetup.sh
+#lunch dot_G-userdebug
+#make sepolicy
+#make init
+#make bootimage
+git clone --depth=1 https://github.com/RahulPalXDA/android_kernel_samsung_j2y18lte.git kernel && cd kernel && rm -rf .git
+git init && git remote add msm https://source.codeaurora.org/quic/la/kernel/msm-3.18 && git fetch msm 'refs/tags/*:refs/tags/*' && git add . && git commit -m "Initial commit"
+wget https://raw.githubusercontent.com/LineageOS/scripts/master/best-caf-kernel/best-caf-kernel.py && python best-caf-kernel.py "LA.UM*-89xx.0"
+echo "\n \n \n FINISHED"
